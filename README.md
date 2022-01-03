@@ -14,7 +14,7 @@ A CMS-style blog site
 
   This project is a CMS style blog site created with Node.js, Express.js, and MySql. It is built using MVC architecture and is a basic CRUD application with User authentication. Users are able to create an account, enabling them to create/update/delete their own blog posts and leave comments on posts created by others. 
 
-  Deployed live at: 
+  Deployed live at: https://sheltered-shore-62033.herokuapp.com/dashboard
 
 
 
@@ -27,12 +27,15 @@ A CMS-style blog site
    Once a User has created an account, they are able access their dashboard. From the dashboard, the User can create their own blog posts or update/delete existing posts. Registered Users are also able to leave comments on others posts. Exciting!
 
 
-
-  ![Screen shot of application](/assets/images/ecommerce-1.png)
+   Homepage:
+  ![Screen shot of application](/assets/images/tech_blog_home.png)
   
   
+   Dashboard:
+  ![Screen shot of application](/assets/images/tech_blog_dashboard.png)
 
-  ![Screen shot of application](/assets/images/ecommerce-2.png)
+
+  ![Screen shot of application](/assets/images/tech_blog_update.png)
 
   ---
 
