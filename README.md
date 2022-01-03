@@ -56,5 +56,4 @@ A CMS-style blog site
   ## Questions
   Have any questions? Feel free to check out my github or send me an Email!
 
-  github.com/jacobmabob <br>
   thejacobmccarthy@gmail.com
