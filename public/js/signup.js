@@ -22,4 +22,4 @@ const signupFormHandler = async (event) => {
 
 document
   .querySelector('#create-account')
-  .addEventListener('submit', signupFormHandler);
+  .addEventListener('click', signupFormHandler);
