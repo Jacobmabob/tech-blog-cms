@@ -1,0 +1,16 @@
+<div class="flex-grow flex flex-col min-w-full">
+    {{#if posts.length}}
+    {{#each posts as | post |}}
+    <div class="p-6 my-6 min-w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex justify-between">
+            <a href="/post/{{post.id}}">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{post.title}}</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Written by {{user.username}} on {{format_date post.date_created}}</p>
+        </div>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{post.body}}</p>
+    </div>
+    {{/each}}
+    {{/if}}
+    
+</div>

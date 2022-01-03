@@ -1,0 +1,38 @@
+<div class="flex-grow flex flex-col min-w-full">
+    <div
+        class="p-6 my-6 min-w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex justify-between">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{title}}</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Written by {{user.username}} on {{format_date
+                date_created}}</p>
+        </div>
+        <p class="mb-7 font-normal text-gray-700 dark:text-gray-400">{{body}}</p>
+        {{#if logged_in}}
+        <form action="submit" class="mb-3">
+            <div class="form-group space-y-2 flex flex-col">
+                <p class="font-medium text-gray-700">Comment: </p>
+                <input class="form-input rounded border border-gray-400" type="text" data-id="{{id}}" id="new-comment"
+                    name="new-comment">
+                <a href="/post/{{id}}" class="">
+                    <button type="button" id="comment-btn"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                </a>
+            </div>
+
+        </form>
+        {{/if}}
+    </div>
+    {{#if comments.length}}
+    {{#each comments as | comment |}}
+    <div
+        class="flex justify-between p-6 my-6 min-w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{comment.body}}</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            -{{comment.user.username}},
+            {{format_date comment.date_created}}</p>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
+
+<script src="../js/post.js"></script>
